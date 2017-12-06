@@ -1,5 +1,6 @@
 'use strict'
 function calculatePayment() {
+
     let principal = document.getElementById("principal").value
     let rate = document.getElementById("rate").value / 100
     let term = document.getElementById("term").value
@@ -13,6 +14,9 @@ function calculatePayment() {
     let z
 
     document.getElementById("payment").value = payment.toFixed(2)
+
+    let calculations = document.getElementById("calculations")
+    calculations.style.display = "block"
 
     tableRef = document.getElementById("amortizationSchedule").getElementsByTagName("tbody")[0]
     tableRef.innerHTML = ""
